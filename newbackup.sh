@@ -33,3 +33,5 @@ sleep 20
 #####RSYNC#####
 #/usr/bin/rsync -avz --exclude=/proc --exclude=/sys --exclude=/dev -e ssh / $rsynclogin@$rsynchost:$myhostname/$mydate
 /usr/bin/rsync -avz --exclude=/home/virtfs -e ssh /home $rsynclogin@$rsynchost:$myhostname/$mydate
+######RSYNC#####
+/usr/bin/rsync -auz --exclude=/home/virtfs --force --delete-after --delete-excluded -e ssh /home $rsynclogin@$rsynchost:$myhostname/$mydate
